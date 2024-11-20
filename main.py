@@ -14,7 +14,7 @@ TWITCH_USERNAMES = os.getenv('TWITCH_USERNAMES', '').replace('\\', '').split(','
 TWITCH_USERNAMES = [username.strip() for username in TWITCH_USERNAMES if username.strip()]
 BOT_NAME = os.getenv('BOT_NAME', 'DiscordBot')
 
-LOG_DIR = f"/home/cordo/{BOT_NAME}/logs/"
+LOG_DIR = os.getenv('LOG_DIR')
 os.makedirs(LOG_DIR, exist_ok=True)
 LOG_FILE = os.path.join(LOG_DIR, "bot.log")
 
